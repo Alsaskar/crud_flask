@@ -1,0 +1,11 @@
+<script src="{{ url_for('static', filename='bootstrap/js/jquery-3.3.1.slim.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap/js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='datatables/js/jquery-1.12.4.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='datatables/js/jquery.dataTables.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='datatables/js/dataTables.bootstrap4.min.js') }}"></script>
+<script>
+	$(document).ready(function() {
+	    $('#tabel').DataTable();
+	});
+</script>

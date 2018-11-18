@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+
+	{% include 'navbar_dashboard.html' %}
+
+	<div class="container">
+		<div class="card" style="margin-top: 2%;">
+			<div class="card-body">
+				<h2>Hallo {{ get_user['namadepan'] }} kamu berhasil masuk ke dashboard</h2>
+			</div>
+		</div>
+	</div>
+
+	{% include 'footer.html' %}
+</body>
+</html>

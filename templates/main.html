@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog Simple With Flask</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<body>
+
+	<div class="container">
+		<div class="card" style="margin-top: 2%;">
+			<div class="card-body">
+				<h2 align="center">Blog Simple Flask</h2>
+				<h3 align="center">Login</h3><hr>
+
+				{% if message %}
+					<div class="alert alert-danger">{{message}}</div>
+				{% endif %}
+
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+				    {% for message in messages %}
+				      <div class="alert alert-success">{{ message }}</div>
+				    {% endfor %}
+				  {% endif %}
+				{% endwith %}
+
+				<form action="" method="post">
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" class="form-control" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" class="form-control" placeholder="Password">
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="form-group">
+								<button type="submit" class="btn btn-primary btn-block">Login</button>
+							</div>
+						</div>
+					</div>
+				</form><hr>
+				Belum punya akun ? <a href="register">Daftar</a>
+			</div>
+		</div>
+	</div>
+
+	{% include 'footer.html' %}
+</body>
+</html>
